@@ -31,8 +31,10 @@ function addPosition(position, db = database){
     .then(res => res)
 }
 
-function deletePosition(id){
-  return 'delete position'
+function deletePosition(id, db = database){
+  return db('positions')
+  .where('id', id)
+  .del()
 }
 
 module.exports = {
