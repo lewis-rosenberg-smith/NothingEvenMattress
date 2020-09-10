@@ -7,7 +7,7 @@ function getSummary(db = database){
     .select('id')
     .select('position_name')
     .select('img_url')
-    .select('img_description')
+    .select('img_name')
     .then(res => res)
 }
 
