@@ -1,18 +1,17 @@
 
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   // Deletes ALL existing entries
   return knex('table_name').del()
     .then(function () {
       // Inserts seed entries
       return knex('table_name').insert([
-        {id: 1, img_name:'The Swastika', position_name:'The Swastika', position_description:'Face down with arms and legs all pointing the same direction in a circle around the torso	3 max	3	Dachshund Friendly', temperature: , participants: , rating: , animal: , img_url:'https://img-9gag-fun.9cache.com/photo/aR7vddq_700bwp.webp'},
-        {id: 2, img_name:'The Heat Wave', position_name:'The Heat Wave', position_description:'Flat on the back spread eagled for maximum air flow	2	4', temperature: , participants: , rating: , animal: , img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
-        {id: 3, img_name:'The Octopus', position_name:'The Octopus', position_description:'Completely enveloping your sleeping partner with all of your limbs intertwined	2	1', temperature: , participants: , rating: , animal: , img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
-        {id: 4, img_name:'Insomniac', position_name:'Insomniac', position_description:'On your back or side browsing the internet on your phone while your partner soundly sleeps next to you	2', temperature: , participants: , rating: , animal: , img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
-        {id: 5, img_name:'The Cold War', position_name:'The Cold War', position_description:'On your back or side facing away from each other. Often with a blanket  or pillow between, while quietly feeling your anger.2', temperature: , participants: , rating: , animal: , img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
-        {id: 6, img_name:'The Hair Monster', position_name:'The Hair Monster', position_description:'Any position can become the hair monster when your face becomes enveloped by your partners hair.	2', temperature: , participants: , rating: , animal: , img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
-        {id: 7, img_name:'The Pervert', position_name:'The Pervert', position_description:'Snuggled up extremely close to your sleeping partner, performing a reacharound hoping they will wake up.	2', temperature: , participants: , rating: , animal: , img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
-
+        { id: 1, img_name: 'The Swastika', position_name: 'The Swastika', position_description: 'Face down with arms and legs all pointing the same direction in a circle around the torso	3 max	3	Dachshund Friendly', temperature: "", participants: "", rating: "", animal: "", img_url: 'https://img-9gag-fun.9cache.com/photo/aR7vddq_700bwp.webp' },
+        { id: 2, img_name: 'The Heat Wave', position_name: 'The Heat Wave', position_description: 'Flat on the back spread eagled for maximum air flow	2	4', temperature: "", participants: "", rating: "", animal: "", img_url: 'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg' },
+        { id: 3, img_name: 'The Octopus', position_name: 'The Octopus', position_description: 'Completely enveloping your sleeping partner with all of your limbs intertwined	2	1', temperature: "", participants: "", rating: "", animal: "", img_url: 'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg' },
+        { id: 4, img_name: 'Insomniac', position_name: 'Insomniac', position_description: 'On your back or side browsing the internet on your phone while your partner soundly sleeps next to you	2', temperature: "", participants: "", rating: "", animal: "", img_url: 'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg' },
+        { id: 5, img_name: 'The Cold War', position_name: 'The Cold War', position_description: 'On your back or side facing away from each other. Often with a blanket  or pillow between, while quietly feeling your anger.2', temperature: "", participants: "", rating: "", animal: "", img_url: 'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg' },
+        { id: 6, img_name: 'The Hair Monster', position_name: 'The Hair Monster', position_description: 'Any position can become the hair monster when your face becomes enveloped by your partners hair.	2', temperature: "", participants: "", rating: "", animal: "", img_url: 'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg' },
+        { id: 7, img_name: 'The Pervert', position_name: 'The Pervert', position_description: 'Snuggled up extremely close to your sleeping partner, performing a reacharound hoping they will wake up.	2', temperature: "", participants: "", rating: "", animal: "", img_url: 'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg' },
 
 
         // {id: 1, img_name:'', position_name:'', position_description:'', temperature: , participants: , rating: , animal: , img_url:''},
