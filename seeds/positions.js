@@ -13,24 +13,30 @@ exports.seed = function(knex) {
         {id: 6, img_name:'The Hair Monster', position_name:'The Hair Monster', position_description:'Any position can become the hair monster when your face becomes enveloped by your partners hair.	2', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
         {id: 7, img_name:'The Pervert', position_name:'The Pervert', position_description:'Snuggled up extremely close to your sleeping partner, performing a reacharound hoping they will wake up.	2', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
         {id: 8, img_name:'BUTT-erfly', position_name:'BUTT-erfly', position_description:'Facing away from your partner to ensure not over heating, but maintaining a connection with your behinds.	2	5', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
+        {id: 9, img_name:'Pillow of Heaven', position_name:'Pillow of Heaven', position_description:'Snuggled up beside your partner with your head resting gently on their bosom, while they hold you in with their arm.	2	5	', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg'},
+        {id: 10, img_name:'Fetus', position_name:'Fetus', position_description:'Lying on your side with knees bent up in front of you and your arms bent with your hands on the same level with your face.	1	5', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+        {id: 11, img_name:'Log', position_name:'Log', position_description:'On your side, completely straight with your arms underneath and on top of you.	1	1', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+        {id: 12, img_name:'Yearner', position_name:'Yearner', position_description:'On your side reaching out for a non existent partner	1	3', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+        {id: 13, img_name:'Soldier', position_name:'Soldier', position_description:'Flat on your back with your legs straight and arms by your side.	1	4', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+        {id: 14, img_name:'Freefaller', position_name:'Freefaller', position_description:'Face down with legs splayed and arms up beside or above your head, sometimes hugging the pillow.', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+        {id: 15, img_name:'Starfish', position_name:'Starfish', position_description:'Flat on your back with your arms and legs spread out wide.	1', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+        {id: 16, img_name:'Quoping', position_name:'Quoping', position_description:'Simultaneously on your back, side, and front with arms above and below you, with one leg spread out behind and the other foot being held by the lower hand.	1	1', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+        {id: 17, img_name:' Quoping', position_name:' Quoping', position_description:'Simultaneously on your back, side, and front with arms above and below you, with one leg spread out behind and the other foot being held by the lower hand.	1	1', temperature:'', participants:'', rating:'', animal:'', img_url:'https://i.redd.it/179by4qpm6rx.jpg'},
+
+
 
 
         // {id: 1, img_name:'', position_name:'', position_description:'', temperature:'', participants:'', rating:'', animal:'', img_url:''},
+
+
+
       ]);
     });
 };
 
 
-// Name	Image URL	Description	Qty	Comfort	Companions			
-// BUTT-erfly	https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg	Facing away from your partner to ensure not over heating, but maintaining a connection with your behinds.	2	5	
-// Pillow of Heaven	https://i.pinimg.com/originals/9f/4e/7a/9f4e7a5544c3b5193098679cf91c95ff.jpg	Snuggled up beside your partner with your head resting gently on their bosom, while they hold you in with their arm.	2	5	
-// Fetus	https://i.redd.it/179by4qpm6rx.jpg	Lying on your side with knees bent up in front of you and your arms bent with your hands on the same level with your face.	1	5	
-// Log	https://i.redd.it/179by4qpm6rx.jpg	On your side, completely straight with your arms underneath and on top of you.	1	1	
-// Yearner	https://i.redd.it/179by4qpm6rx.jpg	On your side reaching out for a non existent partner	1	3	
-// Soldier	https://i.redd.it/179by4qpm6rx.jpg	Flat on your back with your legs straight and arms by your side.	1	4	
-// Freefaller	https://i.redd.it/179by4qpm6rx.jpg	Face down with legs splayed and arms up beside or above your head, sometimes hugging the pillow.	1		
-// Starfish	https://i.redd.it/179by4qpm6rx.jpg	Flat on your back with your arms and legs spread out wide.	1		
-// Quoping	https://i.redd.it/179by4qpm6rx.jpg	Simultaneously on your back, side, and front with arms above and below you, with one leg spread out behind and the other foot being held by the lower hand.	1	1	
+// Name	Image URL	Description	Qty	Comfort	Companions						
+		
 // Baby Positions	https://i.pinimg.com/originals/5c/4d/83/5c4d83b8c037d12b7241930c29ba861d.jpg				
 // The Faithful	https://i.pinimg.com/originals/bd/f8/b9/bdf8b96a18971b8c7f2cb9ad0a29afb1.jpg	Physically in any position with your trusty puuper keeping watch over you while you slumber.			
 // The Knee Nuzzle	https://i.pinimg.com/originals/bd/f8/b9/bdf8b96a18971b8c7f2cb9ad0a29afb1.jpg	On the side with your knees bent, with your cat curled up in the space created preventing your legs from ever being straightened			
