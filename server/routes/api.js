@@ -6,13 +6,15 @@ const router = express.Router()
 router.get('/', (req,res) => {
   return db.getSummary()
     .then(summary => {
-      return res.json(summary)
+      return res.json({body: summary})
     })
-  
 })
 
 router.get('/:id', (req,res) => {
-  return res.json({message:db.getPositionDetail(1)})
+  return db.getPositionDetail(req.params.id)
+    .then(detail => {
+      return res.json({body: detail})
+    })
 })
 
 router.post('/', (req,res) => {
