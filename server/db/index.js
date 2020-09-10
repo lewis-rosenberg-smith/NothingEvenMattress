@@ -2,8 +2,13 @@ const knex = require('../../knexfile')
 const config = process.env.NODE_ENV || 'development'
 const database = require('knex')(knex[config])
 
-function getSummary(){
-  return 'summary'
+function getSummary(db = database){
+  return db('positions')
+    .select('id')
+    .select('position_name')
+    .select('img_url')
+    .select('img_description')
+    .then(res => res)
 }
 
 function getPositionDetail(id){
