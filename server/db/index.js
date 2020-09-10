@@ -22,8 +22,10 @@ function updatePosition(id, position){
   return 'update position: ' + id
 }
 
-function addPosition(position){
-  return 'add position'
+function addPosition(position, db = database){
+  return db('positions')
+    .insert(position)
+    .then(res => res)
 }
 
 function deletePosition(id){
