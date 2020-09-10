@@ -15,19 +15,26 @@ function getPositionDetail(id, db = database){
   return db('positions')
     .where('id', id)
     .first()
-    .then(res=>res)
+    .then(res => res)
 }
 
-function updatePosition(id, position){
-  return 'update position: ' + id
+function updatePosition(id, position,  db = database){
+  return db('positions')
+  .where('id', id)
+  .update(position)
+  .then(res => res)
 }
 
-function addPosition(position){
-  return 'add position'
+function addPosition(position, db = database){
+  return db('positions')
+    .insert(position)
+    .then(res => res)
 }
 
-function deletePosition(id){
-  return 'delete position'
+function deletePosition(id, db = database){
+  return db('positions')
+  .where('id', id)
+  .del()
 }
 
 module.exports = {
