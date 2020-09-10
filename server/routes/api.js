@@ -24,7 +24,11 @@ router.patch('/:id', (req,res) => {
 })
 
 router.delete('/:id', (req, res) => {
-  return res.json({message:db.deletePosition(1)})
+ const id = req.params.id 
+  return db.deletePosition(id)
+  .then(count => {
+    return res.json({body:count})
+  })
 })
 
 
