@@ -6,8 +6,11 @@ function getSummary(){
   return 'summary'
 }
 
-function getPositionDetail(id){
-  return 'positionDetail: ' + id
+function getPositionDetail(id, db = database){
+  return db('positions')
+    .where('id', id)
+    .first()
+    .then(res=>res)
 }
 
 function updatePosition(id, position){
