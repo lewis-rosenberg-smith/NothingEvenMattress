@@ -9,7 +9,7 @@ import { recievePictures } from '../actions'
 class PicList extends React.Component {
   componentDidMount() {
     getSummary().then(data => {
-      this.props.dispatch(recievePictures(data))
+      this.props.dispatch(recievePictures(data.body))
     })
   }
 
@@ -18,8 +18,7 @@ class PicList extends React.Component {
       <>
         <h2>PicList</h2>
         {this.props.pictures.map(pic => {
-          // <Picture />
-          return <p>{Object.keys(pic)}</p>
+          return <Picture id={pic.id} position={pic.position_name} url={pic.img_url} name={pic.img_name}/>
         })}
 
         <Information />
