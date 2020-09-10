@@ -23,6 +23,7 @@ function updatePosition(id, position,  db = database){
   .where('id', id)
   .update(position)
   .then(res => res)
+}
 
 function addPosition(position){
   return 'add position'
