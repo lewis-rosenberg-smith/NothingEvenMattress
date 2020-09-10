@@ -1,8 +1,13 @@
 import React from 'react'
 
+import PicList from './PicList'
+
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+      <h1>App</h1>
+      <PicList />
+    </>
   )
 }
 
