@@ -16,3 +16,6 @@ class PicList extends React.Component {
 }
 
 export default PicList
+
+
+
