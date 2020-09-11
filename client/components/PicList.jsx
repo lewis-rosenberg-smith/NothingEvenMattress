@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Picture from './Picture'
 import Information from './Information'
 import { getSummary } from '../api/index.js'
-import { recievePictures } from '../actions'
+import { recievePictures, changePage } from '../actions'
 
 class PicList extends React.Component {
   componentDidMount() {
@@ -27,7 +27,7 @@ class PicList extends React.Component {
     return (
       <>
         <h2>PicList</h2>
-
+        <button onClick={() => this.props.dispatch(changePage("pictures"))}>HOME</button>
         {this.props.viewPage === "pictures"
           ? this.props.pictures.map(pic => {
             return <Picture id={pic.id} position={pic.position_name} url={pic.img_url} name={pic.img_name} />
