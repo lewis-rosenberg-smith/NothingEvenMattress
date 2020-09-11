@@ -1,21 +1,25 @@
 import React from 'react'
-import Delete from './Delete'
 
 import Add from './Add'
+import { connect } from "react-redux";
 
 import PicList from './PicList'
+import { changePage } from '../actions'
+
 
 const App = () => {
   return (
     <>
       <h1>Nothing Even Mattress</h1>
       <PicList />
-      <div id="add">
-        <h2>Add A New Position</h2>
-        <Add />
-      </div>
     </>
   )
 }
 
-export default App
+const mapStateToProps = (state) => {
+  return {
+    viewPage: state.viewPage,
+  };
+};
+
+export default connect(mapStateToProps)(App);
