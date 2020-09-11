@@ -8,8 +8,12 @@ import PicList from './PicList'
 const App = () => {
   return (
     <>
-      <h1>Nothing Even Matress</h1>
+      <h1>Nothing Even Mattress</h1>
       <PicList />
+      <div id="add">
+        <h2>Add A New Position</h2>
+        <Add />
+      </div>
     </>
   )
 }
