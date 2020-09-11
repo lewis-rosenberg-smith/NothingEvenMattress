@@ -27,13 +27,14 @@ class PicList extends React.Component {
     return (
       <>
         <h2>PicList</h2>
-
+        <ul>
         {this.props.viewPage === "pictures"
           ? this.props.pictures.map(pic => {
             return <Picture id={pic.id} position={pic.position_name} url={pic.img_url} name={pic.img_name} />
           })
           : <Information picData={this.props.storePicture} />
         }
+        </ul>
       </>
     )
   }
