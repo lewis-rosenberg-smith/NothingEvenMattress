@@ -30,14 +30,24 @@ export function updatePosition(positionId) {
     .catch(errorHandler('PATCH', '/v1/:id'))
 }
 export function deletePosition(positionId) {
-  return request.del(`/v1/${positionId}`)
+  return request.del(apiUrl + positionId)
     .then(res => res)
     .catch((err) => {
       console.log("error from deletePosition: " + positionId, err)
     })
 }
 export function addNewPosition(newPosition) {
-  return request.post('/v1/')
+  const position = {
+    img_url: newPosition.imageUrl,
+    img_name: newPosition.imageName,
+    position_name: newPosition.positionName,
+    position_description: newPosition.positionsDescription,
+    temperature: newPosition.temperature,
+    participants: newPosition.participants,
+    rating: newPosition.rating,
+    animal: newPosition.animal,
+  }
+  return request.post(apiUrl)
     .send(newPosition)
     .then(res => {
       return res.body
