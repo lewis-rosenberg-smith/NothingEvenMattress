@@ -1,4 +1,6 @@
 import React from 'react'
+import Delete from './Delete'
+
 import Add from './Add'
 
 import PicList from './PicList'
