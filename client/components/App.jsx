@@ -6,7 +6,7 @@ import PicList from './PicList'
 const App = () => {
   return (
     <>
-      <h1>App</h1>
+      <h1>Nothing Even Matress</h1>
       <PicList />
     </>
   )
