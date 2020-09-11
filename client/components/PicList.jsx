@@ -17,12 +17,14 @@ class PicList extends React.Component {
     return (
       <>
         <h2>PicList</h2>
-        {this.props.pictures.map(pic => {
-          
-          return <Picture id={pic.id} position={pic.position_name} url={pic.img_url} name={pic.img_name}/>
-        })}
 
-        <Information />
+        {this.props.viewPage === "pictures"
+          ? this.props.pictures.map(pic => {
+            return <Picture id={pic.id} position={pic.position_name} url={pic.img_url} name={pic.img_name} />
+          })
+          : <Information picData={this.props.storePicture} />
+        }
+        {/* //store in global state on click, then render it */}
       </>
     )
   }
@@ -32,6 +34,7 @@ const mapStateToProps = (state) => {
   return {
     pictures: state.pictures,
     viewPage: state.viewPage,
+    storePicture: state.storePicture
   }
 }
 

@@ -3,7 +3,7 @@ import request from 'superagent'
 const apiUrl = '/api/v1/'
 
 export function getSummary() {
-  return request.get('/api/v1/')
+  return request.get(apiUrl)
     .then(res => {
       return res.body
     })
@@ -12,8 +12,8 @@ export function getSummary() {
     })
 }
 
-export function getPositionDetail() {
-  return request.get('/v1/1')
+export function getPositionDetail(id) {
+  return request.get(apiUrl + id)
     .then(res => {
       return res.body
     })
