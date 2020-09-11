@@ -28,6 +28,15 @@ class PicList extends React.Component {
         <button id="home" onClick={() => this.props.dispatch(changePage("pictures"))}>
           HOME
         </button>
+
+        <button id="add" onClick={() => this.props.dispatch(changePage("add"))}>
+          ADD
+        </button>
+
+        {this.props.viewPage === "add" &&
+          <div id="add"><h2>Add A New Position</h2><Add /></div>
+        }
+
         <ul>
           {this.props.viewPage === "pictures" ? (
             this.props.pictures.map((pic) => {
