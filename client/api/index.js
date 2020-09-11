@@ -52,5 +52,5 @@ export function addNewPosition(newPosition) {
     .then(res => {
       return res.body
     })
-    .catch(errorHandler('POST', '/v1/'))
+    .catch((err) => console.log(err))
 }
