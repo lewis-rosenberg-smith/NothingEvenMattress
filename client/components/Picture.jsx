@@ -15,9 +15,8 @@ class Picture extends React.Component {
   render() {
     return (
       <>
-        <h4>{this.props.position}</h4>
-        <button onClick={this.handleClick}>Information</button>
-        <img src={this.props.url}></img>
+        <li><button onClick={this.handleClick}>{this.props.position}</button></li>
+        {/* <img src={this.props.url}></img> */}
       </>
     )
   }
