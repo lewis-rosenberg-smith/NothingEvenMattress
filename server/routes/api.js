@@ -4,11 +4,17 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/', (req,res) => {
-  return res.json({message: db.getSummary()})
+  return db.getSummary()
+    .then(summary => {
+      return res.json({body: summary})
+    })
 })
 
 router.get('/:id', (req,res) => {
-  return res.json({message:db.getPositionDetail(1)})
+  return db.getPositionDetail(req.params.id)
+    .then(detail => {
+      return res.json({body: detail})
+    })
 })
 
 router.post('/', (req,res) => {
@@ -20,7 +26,11 @@ router.patch('/:id', (req,res) => {
 })
 
 router.delete('/:id', (req, res) => {
-  return res.json({message:db.deletePosition(1)})
+ const id = req.params.id 
+  return db.deletePosition(id)
+  .then(count => {
+    return res.json({body:count})
+  })
 })
 
 
