@@ -1,5 +1,5 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from "react";
+import { connect } from "react-redux";
 
 import Picture from './Picture'
 import Information from './Information'
@@ -9,33 +9,44 @@ import { recievePictures, changePage } from '../actions'
 
 class PicList extends React.Component {
   componentDidMount() {
-    getSummary().then(data => {
-      this.props.dispatch(recievePictures(data.body))
-    })
+    getSummary().then((data) => {
+      this.props.dispatch(recievePictures(data.body));
+    });
   }
 
   componentDidUpdate() {
-    getSummary().then(data => {
-      this.props.dispatch(recievePictures(data.body))
-    })
+    getSummary().then((data) => {
+      this.props.dispatch(recievePictures(data.body));
+    });
   }
 
+  animateCard = () => { };
 
   render() {
     return (
       <>
-        <h2>PicList</h2>
-        <button onClick={() => this.props.dispatch(changePage("pictures"))}>HOME</button>
-        <Add />
+        <button id="home" onClick={() => this.props.dispatch(changePage("pictures"))}>
+          HOME
+        </button>
+        <ul>
 
-        {this.props.viewPage === "pictures"
-          ? this.props.pictures.map(pic => {
-            return <Picture id={pic.id} position={pic.position_name} url={pic.img_url} name={pic.img_name} />
-          })
-          : <Information picData={this.props.storePicture} />
-        }
+          {this.props.viewPage === "pictures" ? (
+            this.props.pictures.map((pic) => {
+              return (
+                <Picture
+                  id={pic.id}
+                  position={pic.position_name}
+                  url={pic.img_url}
+                  name={pic.img_name}
+                />
+              );
+            })
+          ) : (
+              <Information picData={this.props.storePicture} />
+            )}
+        </ul>
       </>
-    )
+    );
   }
 }
 
@@ -43,8 +54,8 @@ const mapStateToProps = (state) => {
   return {
     pictures: state.pictures,
     viewPage: state.viewPage,
-    storePicture: state.storePicture
-  }
-}
+    storePicture: state.storePicture,
+  };
+};
 
-export default connect(mapStateToProps)(PicList)
+export default connect(mapStateToProps)(PicList);
