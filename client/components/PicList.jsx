@@ -29,7 +29,7 @@ class PicList extends React.Component {
           HOME
         </button>
         <ul>
-
+          {this.props.viewPage === "pictures" && <Add />}
           {this.props.viewPage === "pictures" ? (
             this.props.pictures.map((pic) => {
               return (
