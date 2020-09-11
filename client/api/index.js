@@ -3,7 +3,7 @@ import request from 'superagent'
 const apiUrl = '/api/v1/'
 
 export function getSummary() {
-  return request.get('/api/v1/')
+  return request.get(apiUrl)
     .then(res => {
       return res.body
     })
@@ -12,8 +12,8 @@ export function getSummary() {
     })
 }
 
-export function getPositionDetail() {
-  return request.get('/v1/1')
+export function getPositionDetail(id) {
+  return request.get(apiUrl + id)
     .then(res => {
       return res.body
     })
@@ -37,7 +37,17 @@ export function deletePosition(positionId) {
     })
 }
 export function addNewPosition(newPosition) {
-  return request.post('/v1/')
+  const position = {
+    img_url: newPosition.imageUrl,
+    img_name: newPosition.imageName,
+    position_name: newPosition.positionName,
+    position_description: newPosition.positionsDescription,
+    temperature: newPosition.temperature,
+    participants: newPosition.participants,
+    rating: newPosition.rating,
+    animal: newPosition.animal,
+  }
+  return request.post(apiUrl)
     .send(newPosition)
     .then(res => {
       return res.body
