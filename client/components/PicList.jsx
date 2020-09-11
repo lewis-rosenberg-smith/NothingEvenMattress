@@ -18,6 +18,7 @@ class PicList extends React.Component {
       <>
         <h2>PicList</h2>
         {this.props.pictures.map(pic => {
+          (this.props.)
           return <Picture id={pic.id} position={pic.position_name} url={pic.img_url} name={pic.img_name}/>
         })}
 
@@ -29,7 +30,8 @@ class PicList extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    pictures: state.pictures
+    pictures: state.pictures,
+    viewPage: state.viewPage,
   }
 }
 
