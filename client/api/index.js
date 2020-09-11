@@ -1,9 +1,9 @@
 import request from 'superagent'
 
-// const apiUrl = 'http://localhost:3000/api/v1/'
+const apiUrl = '/api/v1/'
 
 export function getSummary() {
-  return request.get('/api/v1/')
+  return request.get(apiUrl)
     .then(res => {
       return res.body
     })
@@ -12,8 +12,8 @@ export function getSummary() {
     })
 }
 
-export function getPositionDetail() {
-  return request.get('/v1/1')
+export function getPositionDetail(id) {
+  return request.get(apiUrl + id)
     .then(res => {
       return res.body
     })
@@ -30,17 +30,27 @@ export function updatePosition(positionId) {
     .catch(errorHandler('PATCH', '/v1/:id'))
 }
 export function deletePosition(positionId) {
-  return request.del(`/v1/${positionId}`)
+  return request.del(apiUrl + positionId)
     .then(res => res)
     .catch((err) => {
       console.log("error from deletePosition: " + positionId, err)
     })
 }
 export function addNewPosition(newPosition) {
-  return request.post('/v1/')
+  const position = {
+    img_url: newPosition.imageUrl,
+    img_name: newPosition.imageName,
+    position_name: newPosition.positionName,
+    position_description: newPosition.positionsDescription,
+    temperature: newPosition.temperature,
+    participants: newPosition.participants,
+    rating: newPosition.rating,
+    animal: newPosition.animal,
+  }
+  return request.post(apiUrl)
     .send(newPosition)
     .then(res => {
       return res.body
     })
-    .catch(errorHandler('POST', '/v1/'))
+    .catch((err) => console.log(err))
 }
