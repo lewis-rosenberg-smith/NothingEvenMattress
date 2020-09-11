@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import Picture from "./Picture";
-import Information from "./Information";
-import { getSummary } from "../api/index.js";
-import { recievePictures, changePage } from "../actions";
+import Picture from './Picture'
+import Information from './Information'
+import Add from './Add'
+import { getSummary } from '../api/index.js'
+import { recievePictures, changePage } from '../actions'
 
 class PicList extends React.Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class PicList extends React.Component {
     });
   }
 
-  animateCard = () => {};
+  animateCard = () => { };
 
   render() {
     return (
@@ -28,7 +29,7 @@ class PicList extends React.Component {
           HOME
         </button>
         <ul>
-          
+          {this.props.viewPage === "pictures" && <Add />}
           {this.props.viewPage === "pictures" ? (
             this.props.pictures.map((pic) => {
               return (
@@ -41,8 +42,8 @@ class PicList extends React.Component {
               );
             })
           ) : (
-            <Information picData={this.props.storePicture} />
-          )}
+              <Information picData={this.props.storePicture} />
+            )}
         </ul>
       </>
     );
