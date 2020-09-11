@@ -13,6 +13,16 @@ class PicList extends React.Component {
     })
   }
 
+  componentDidUpdate() {
+    getSummary().then(data => {
+      this.props.dispatch(recievePictures(data.body))
+    })
+  }
+
+  animateCard = () => {
+
+  }
+
   render() {
     return (
       <>
@@ -24,7 +34,6 @@ class PicList extends React.Component {
           })
           : <Information picData={this.props.storePicture} />
         }
-        {/* //store in global state on click, then render it */}
       </>
     )
   }
