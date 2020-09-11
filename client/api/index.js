@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-// const apiUrl = 'http://localhost:3000/api/v1/'
+const apiUrl = '/api/v1/'
 
 export function getSummary() {
   return request.get('/api/v1/')
@@ -37,7 +37,17 @@ export function deletePosition(positionId) {
     })
 }
 export function addNewPosition(newPosition) {
-  return request.post('/v1/')
+  const position = {
+    img_url: newPosition.imageUrl,
+    img_name: newPosition.imageName,
+    position_name: newPosition.positionName,
+    position_description: newPosition.positionsDescription,
+    temperature: newPosition.temperature,
+    participants: newPosition.participants,
+    rating: newPosition.rating,
+    animal: newPosition.animal,
+  }
+  return request.post(apiUrl)
     .send(newPosition)
     .then(res => {
       return res.body

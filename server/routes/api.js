@@ -19,10 +19,10 @@ router.get('/:id', (req,res) => {
 
 router.post("/", (req, res) => {
   const position = {
-    img_url: req.body.img_url,
-    img_name: req.body.img_name,
-    position_name: req.body.position_name,
-    position_description: req.body.position_description,
+    img_url: req.body.imageUrl,
+    img_name: req.body.imageName,
+    position_name: req.body.positionName,
+    position_description: req.body.positionsDescription,
     temperature: req.body.temperature,
     participants: req.body.participants,
     rating: req.body.rating,
