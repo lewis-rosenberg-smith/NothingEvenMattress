@@ -1,4 +1,5 @@
 import {deletePosition} from '../api'
+import React from 'react'
 
 class Delete extends React.Component {
   deletePost = id => {
@@ -16,3 +17,5 @@ class Delete extends React.Component {
     )
   }
 }
+
+export default Delete
